@@ -1,4 +1,32 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>Home Page</h1>
+
+<!-- insert variables -->
+<h2>Title: {{ title }}</h2>
+<p>{{ message }}</p>
+
+<hr>
+
+<!-- check conditions -->
+{% if title == 'Django Framework' %}
+<p>Yes</p>
+{% else %}
+<p>No</p>
+{% endif %}
+
+<hr>
+
+<!-- for loop -->
+{% for item in lists %}
+<p>{{ item }}</p>
+{% endfor %}
+
+<hr>
+
+<!-- filter -->
+<p>{{ title|upper }}</p>
+<p>{{ title|lower }}</p>
+<p>{{ title|title }}</p>
+
 {% endblock content %}
